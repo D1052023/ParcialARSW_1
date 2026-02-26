@@ -5,8 +5,6 @@
  */
 package edu.eci.arsw.math;
 
-import java.util.Arrays;
-
 /**
  *
  * @author hcadavid
@@ -14,9 +12,9 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String a[]) {
-        System.out.println(bytesToHex(PiDigits.getDigits(0, 10)));
-        System.out.println(bytesToHex(PiDigits.getDigits(1, 100)));
-        System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000)));
+        System.out.println(bytesToHex(PiDigits.getDigits(0, 10,50)));
+        System.out.println(bytesToHex(PiDigits.getDigits(1, 100,50)));
+        System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000,50)));
     }
 
     private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
@@ -31,7 +29,8 @@ public class Main {
         StringBuilder sb=new StringBuilder();
         for (int i=0;i<hexChars.length;i=i+2){
             //sb.append(hexChars[i]);
-            sb.append(hexChars[i+1]);            
+            sb.append(hexChars[i+1]);
+            
         }
         return sb.toString();
     }
